@@ -5,7 +5,6 @@ import axios from "axios";
 import SeriesFetch from "../assets/Series";
 const Series = () => {
     const [trendingSeries, setTrendingSeries] = useState([]);
-    const [popularSeries, setPopularSeries] = useState([]);
     const [koreaSeries, setKoreaSeries] = useState([]);
     const [japanSeries, setJapanSeries] = useState([]);
 
@@ -14,12 +13,10 @@ const Series = () => {
             try {
 
                 const trendingSeries = await axios.get(SeriesFetch.TRENDING(1));
-                const popularSeries = await axios.get(SeriesFetch.POPULAR(1));
                 const koreaSeriesData = await axios.get(SeriesFetch.COUNTRIES("ko"));
                 const japanSeriesData = await axios.get(SeriesFetch.COUNTRIES("ja"));
 
                 setTrendingSeries(trendingSeries.data.results);
-                setPopularSeries(popularSeries.data.results);
                 setKoreaSeries(koreaSeriesData.data.results);
                 setJapanSeries(japanSeriesData.data.results);
             } catch (error) {
@@ -35,7 +32,6 @@ const Series = () => {
             <div className="bg-gray-950">
                 <Navbar />
                 <ListMovies title={"TRENDING SERIES"} movie={trendingSeries} />
-                <ListMovies title={"POPULAR SERIES"} movie={popularSeries} />
                 <ListMovies title={"KOREAN SERIES"} movie={koreaSeries} />
                 <ListMovies title={"JAPANESE SERIES"} movie={japanSeries} />
             </div>
