@@ -6,7 +6,7 @@ const SeriesFetch = {
         return `${BASE_URL}/trending/tv/day?api_key=${API_KEY}&page=${page}`;
     },
     POPULAR: function (page) {
-        return `${BASE_URL}/tv/popula?api_key=${API_KEY}&page=${page}`;
+        return `${BASE_URL}/tv/popular?api_key=${API_KEY}&page=${page}`;
     },
     COUNTRIES: function (country) {
         return `${BASE_URL}/discover/tv?api_key=${API_KEY}&with_original_language=${country}`
