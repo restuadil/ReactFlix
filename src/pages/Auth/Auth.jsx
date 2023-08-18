@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 import Input from '../../components/Input';
 
 
-const Auth = () => {
-   
+const Home = () => {
+
     return (
         <div className='bg-black'>
             <div
@@ -98,7 +98,7 @@ const Auth = () => {
     );
 };
 
-export default Auth;
+export default Home;
 
 
 

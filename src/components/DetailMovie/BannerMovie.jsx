@@ -3,12 +3,20 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Navbar from "../Navbar/Navbar";
 import RuntimeMovie from "./RuntimeMovie";
-import { faBookmark, faPlay } from "@fortawesome/free-solid-svg-icons";
+import { faBookmark, faPlay, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import YouTube from 'react-youtube';
 
 const BannerMovie = ({ detail }) => {
+    const opts = {
+        height: '390',
+        width: '640',
+        playerVars: {
+            // https://developers.google.com/youtube/player_parameters
+            autoplay: 1
+        }
+    }
     const [isPopupOpen, setIsPopupOpen] = useState(false);
 
     const openPopup = () => {
@@ -20,7 +28,7 @@ const BannerMovie = ({ detail }) => {
     };
 
     const trailer = detail && detail.videos.results[0]?.key;
-    const videoId = trailer; 
+    const videoId = trailer;
 
     return (
         <>
@@ -65,15 +73,11 @@ const BannerMovie = ({ detail }) => {
                 </div>
             </section>
             {isPopupOpen && (
-                <div className="fixed inset-0 z-10 flex justify-center items-center bg-black bg-opacity-70 w-full">
-                    <div className="bg-white rounded-lg overflow-hidden">
-                        <YouTube videoId={videoId} opts={{ width: '100%', height: '100%' }} />
-                        <div className="p-4">
-                            <button onClick={closePopup} className="text-white bg-red-500 px-4 py-2 rounded-md hover:bg-red-600">
-                                Close
-                            </button>
-                        </div>
-                    </div>
+                <div className="fixed inset-0 z-10 flex justify-center items-center bg-black bg-opacity-0">
+                    <YouTube videoId={videoId} opts={opts} />
+                    <button onClick={closePopup} className="text-white bg-red-500 px-4 py-2 rounded-md hover:bg-red-600">
+                        <FontAwesomeIcon icon={faXmark} />
+                    </button>
                 </div>
             )}
         </>

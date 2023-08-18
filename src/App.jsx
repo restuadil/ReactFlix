@@ -1,4 +1,3 @@
-import Auth from "./pages/Auth/Auth";
 import { Route, Routes } from 'react-router-dom';
 import Login from "./pages/Auth/Login";
 import Home from "./pages/Home";
@@ -12,7 +11,7 @@ import SeriesGenre from "./pages/SeriesGenre";
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<Auth />} />
+      <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/browse" element={<Home />} />
       <Route path="/movies" element={<Movies />} />
