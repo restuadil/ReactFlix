@@ -26,14 +26,14 @@ const ListMovies = ({ title, movie }) => {
                 </div>
                 <div className='sm:hidden md:hidden lg:hidden xl:block'>
                     <button
-                        className={`absolute left-16 top-1/2 transform -translate-y-1/2 bg-opacity-30 p-2 rounded-full py-5 ${startIndex === 0 ? 'hidden' : ""}
+                        className={`absolute left-7 top-1/2 transform -translate-y-1/2 bg-opacity-30 p-2 rounded-full py-5 ${startIndex === 0 ? 'hidden' : ""}
             bg-gray-700 active:scale-125 active:text-white`}
                         onClick={prevSlide}
                     >
                         <FontAwesomeIcon icon={faChevronLeft} />
                     </button>
                     <button
-                        className={`absolute right-16 top-1/2 transform -translate-y-1/2 bg-opacity-30 p-2 rounded-full py-5 ${startIndex === movie.length - 5 ? 'hidden' : ""}
+                        className={`absolute right-7 top-1/2 transform -translate-y-1/2 bg-opacity-30 p-2 rounded-full py-5 ${startIndex === movie.length - 5 ? 'hidden' : ""}
                         bg-gray-700 active:scale-125 active:text-white`}
                         onClick={nextSlide}
                     >
@@ -41,7 +41,7 @@ const ListMovies = ({ title, movie }) => {
                     </button>
                 </div>
                 <div className="flex flex-row flex-wrap justify-center">
-                    {movie && movie.slice(startIndex, startIndex + 5).map((movie) => {
+                    {movie && movie.slice(startIndex, startIndex + 6).map((movie) => {
                         return (
                             <motion.div
                                 key={movie.id}

@@ -23,7 +23,6 @@ const SeriesFetch = {
     },
     GENRE: function (id) {
         return `${BASE_URL}/discover/tv/?api_key=${API_KEY}&with_genres=${id}`
-
     }
 }
 

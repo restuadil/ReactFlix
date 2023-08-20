@@ -40,6 +40,9 @@ const MovieFetch = {
     },
     REVIEWS: function (id) {
         return `${BASE_URL}/movie/${id}/reviews?api_key=${API_KEY}`
+    },
+    GENRE: function (id) {
+        return `${BASE_URL}/discover/movie/?api_key=${API_KEY}&with_genres=${id}`
     }
 
 }

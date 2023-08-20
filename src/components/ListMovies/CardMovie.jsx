@@ -21,7 +21,7 @@ const CardMovie = ({ movie }) => {
     }
 
     return (
-        <div className="relative">
+        <div className="relative transition-transform transform-gpu group hover:scale-105 hover:shadow-lg">
             <div
                 className="w-[200px] h-[300px] rounded-lg m-2 overflow-hidden relative shadow-md shadow-slate-300"
                 style={{

@@ -6,12 +6,12 @@ import Serie from "./pages/Serie";
 import Movies from "./pages/Movies";
 import Series from "./pages/Series";
 import Genre from "./pages/Genre";
-import SeriesGenre from "./pages/SeriesGenre";
+import Homee from './pages/Auth/Auth';
 
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Homee />} />
       <Route path="/login" element={<Login />} />
       <Route path="/browse" element={<Home />} />
       <Route path="/movies" element={<Movies />} />
@@ -19,7 +19,7 @@ export default function App() {
       <Route path="/genre" element={<Genre />} />
       <Route path="/series/:id" element={<Serie />} />
       <Route path="/movie/:id" element={<Movie />} />
-      <Route path="/series/genre/:id" element={<SeriesGenre />} />
+      <Route path="/genre/:genreName" element={<Genre />} />
     </Routes>
   )
 }
