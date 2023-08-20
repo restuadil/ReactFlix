@@ -1,10 +1,10 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import Content from '../../components/content';
 import QandA from '../../components/QandA';
 import Footer from '../../components/Footer';
 import { Link } from 'react-router-dom';
 import Input from '../../components/Input';
+import Content from '../../components/content';
 
 
 const Auth = () => {
