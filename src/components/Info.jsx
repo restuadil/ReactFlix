@@ -1,5 +1,6 @@
-// eslint-disable-next-line react/prop-types
-const Content = ({ title, children, img, second }) => {
+/* eslint-disable react/prop-types */
+
+const Info = ({ title, children, img, second }) => {
     return (
         <div className="bg-black border-y-4 border-gray-500">
             <div className={`flex flex-col mb-5  md:flex-row ${second ? 'md:flex-row-reverse' : ''} md:mx-10 lg:mx-20 sm:h-[60vh] `}>
@@ -12,7 +13,7 @@ const Content = ({ title, children, img, second }) => {
                 <img src={img} alt="" className="md:w-1/2" />
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default Content;
+export default Info

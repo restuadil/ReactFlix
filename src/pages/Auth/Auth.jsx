@@ -4,7 +4,7 @@ import QandA from '../../components/QandA';
 import Footer from '../../components/Footer';
 import { Link } from 'react-router-dom';
 import Input from '../../components/Input';
-import Content from '../../components/content';
+import Info from '../../components/Info';
 
 
 const Auth = () => {
@@ -65,18 +65,18 @@ const Auth = () => {
 
             {/* {comtent section} */}
             <div>
-                <Content title={"Nikmati di TV-mu"} img={"/images/content1.png"}>
+                <Info title={"Nikmati di TV-mu"} img={"/images/content1.png"}>
                     Tonton di Smart TV, Playstation, Xbox, Chromecast, Apple TV, pemutar Blu-ray, dan banyak lagi.
-                </Content>
-                <Content title={"Download acara TV untuk menontonnya secara offline"} img={"/images/content2.jpg"} second={true}>
+                </Info>
+                <Info title={"Download acara TV untuk menontonnya secara offline"} img={"/images/content2.jpg"} second={true}>
                     Simpan favoritmu dengan mudah agar selalu ada acara TV dan film yang bisa ditonton.
-                </Content>
-                <Content title={"Tonton di mana pun"} img={"/images/content3.png"}>
+                </Info>
+                <Info title={"Tonton di mana pun"} img={"/images/content3.png"}>
                     Streaming film dan acara TV tak terbatas di ponsel, tablet, laptop, dan TV-mu.
-                </Content>
-                <Content title={"Buat profil untuk anak"} img={"/images/content4.png"} second={true}>
+                </Info>
+                <Info title={"Buat profil untuk anak"} img={"/images/content4.png"} second={true}>
                     Kirim anak-anak untuk bertualang bersama karakter favorit mereka di dunia yang dibuat khusus untuk mereka—gratis dengan keanggotaanmu.
-                </Content>
+                </Info>
             </div>
             {/* {Q and A section} */}
             <QandA />
