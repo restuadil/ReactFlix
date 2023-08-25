@@ -11,7 +11,6 @@ import Auth from './pages/Auth/Auth';
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<Auth />} />
       <Route path="/login" element={<Login />} />
       <Route path="/browse" element={<Home />} />
       <Route path="/movies" element={<Movies />} />
