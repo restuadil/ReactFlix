@@ -9,7 +9,7 @@ import Home from './pages/Home';
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/browse" element={<Home />} />
       <Route path="/movies" element={<Movies />} />
       <Route path="/series" element={<Series />} />
       <Route path="/genre" element={<Genre />} />
