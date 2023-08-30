@@ -40,7 +40,6 @@ const Auth = () => {
                 </nav >
 
                 <div className="flex flex-col  items-center text-white mx-5 mt-10 ">
-                    {/* {content section} */}
                     <div className='sm:mt-20'>
                         <h1 className="text-3xl font-bold text-center sm:text-4xl">
                             Film, acara TV tak terbatas, dan banyak lagi

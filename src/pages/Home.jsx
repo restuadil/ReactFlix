@@ -32,7 +32,7 @@ const Home = () => {
         }
 
         fetchData();
-    }, []);
+    }, [all, series, movie, koreaSeries, japanSeries]);
 
     return (
         <>

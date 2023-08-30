@@ -4,11 +4,12 @@ import Serie from "./pages/Serie";
 import Movies from "./pages/Movies";
 import Series from "./pages/Series";
 import Genre from "./pages/Genre";
+import Home from './pages/Home';
 
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<Movies />} />
+      <Route path="/" element={<Home />} />
       <Route path="/movies" element={<Movies />} />
       <Route path="/series" element={<Series />} />
       <Route path="/genre" element={<Genre />} />
