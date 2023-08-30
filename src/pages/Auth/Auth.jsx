@@ -52,12 +52,14 @@ const Auth = () => {
                         <div className="w-full ">
                             <Input id={"email"} label={"Email"} type={"email"} />
                         </div>
-                        <button
-                            className="w-24 h-12 mx-auto my-2 bg-red-600 text-white rounded-lg text-sm font-semibold shadow-md hover:bg-red-700 
+                        <Link to={'/browse'}>
+                            <button
+                                className="w-24 h-12 mx-auto my-2 bg-red-600 text-white rounded-lg text-sm font-semibold shadow-md hover:bg-red-700 
                             sm:ml-2 sm:w-36" >
-                            Masuk
-                            <FontAwesomeIcon icon={faAngleRight} className='ml-1' />
-                        </button>
+                                Masuk
+                                <FontAwesomeIcon icon={faAngleRight} className='ml-1' />
+                            </button>
+                        </Link>
                     </form>
                 </div>
             </div >

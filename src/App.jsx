@@ -5,10 +5,12 @@ import Movies from "./pages/Movies";
 import Series from "./pages/Series";
 import Genre from "./pages/Genre";
 import Home from './pages/Home';
+import Auth from './pages/Auth/Auth';
 
 export default function App() {
   return (
     <Routes>
+      <Route path="/" element={<Auth />} />
       <Route path="/browse" element={<Home />} />
       <Route path="/movies" element={<Movies />} />
       <Route path="/series" element={<Series />} />
