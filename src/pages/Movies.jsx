@@ -27,7 +27,7 @@ const Movies = () => {
         }
 
         fetchData();
-    }, []);
+    }, [nowPlaying, popular, topRated, upcoming]);
 
     return (
         <>
